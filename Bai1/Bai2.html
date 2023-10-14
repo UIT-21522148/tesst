@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function tinhtien()
+        {
+            var tong = 0;
+            for(i = 0; i < thucan.length; i++)
+            {
+                if(thucan[i].selected)
+                tong += parseInt(thucan[i].value);
+
+            }
+            
+
+            for(i = 0; i < drink.legnth; i++)
+            {
+                if(drink[i].selected)
+                tong += parseInt(drink[i].value);
+            }
+
+            tien.innerText = tong;
+        }
+    </script>
+</head>
+
+
+<body>
+    <table border="1">
+
+        <tr>
+            <th colspan=3>THỰC ĐƠN</th>
+        </tr>
+
+        <tr>
+            <th>Thức ăn</th>
+            <th>Nước uống</th>
+            <th>Thời điểm</th>
+        </tr>
+
+        <tr>
+            <td>
+                <select id = "thucan" multiple>
+                    <option value="20000">Bún bò</option>
+                    <option value="18000">Hủ tiếu</option>
+                    <option value="17000">Bánh canh</option>
+                    <option value="19000">Phở bò</option>
+                    <option value="15000">nuôi</option>
+                    <option value="12000">Bánh mì thịt</option>
+                    <option value="15000">Bánh cuốn</option>
+                </select>
+            </td>
+            
+            <td>
+                <select id = "drink" multiple>
+                    <option value="12000">Cà phê đá</option>
+                    <option value="15000">Cà phê sữa</option>
+                    <option value="13000">Chanh dây</option>
+                    <option value="12000">Chanh muối</option>
+                    <option value="14000">Xí muội</option>
+                    <option value="13000">Sữa tươi</option>
+                    <option value="17000">Cam vắt</option>
+                </select>
+            </td>
+
+            <td>
+                <input type="radio" id="banngay" name = "ngay" checked>Ban ngày<br> 
+                <input type="radio" id="bandem" name = "ngay" checked> Ban đêm
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <input type="button" id="tinhtiennut" value="Tính tiền" onclick = "tinhtien()">
+            </td>
+        </tr>
+    </table>
+
+    <div id="tien"> </div>
+</body>
+</html>

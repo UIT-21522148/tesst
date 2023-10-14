@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+</head>
+<body>
+    <script>
+    
+    </script>
+
+    <table border="1">
+        <tr>
+            <th>Lương</th>
+            <th>
+                <form name="frm">
+                    <input type="text" name="luong"> 
+                </form>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>Hệ số lương</td>
+            <td>
+                <form name="hsl">
+                    <input type="number" name="hesoluong" step="0.1">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="button">Tính lương tháng</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lương tháng</td>
+            <td>           </td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+</head>
+<body>
+    <script>
+        // Hàm tính lương tháng dựa trên lương và hệ số lương
+        function tinhLuong() {
+            var luong = parseFloat(document.frm.luong.value);
+            var heSoLuong = parseFloat(document.hsl.hesoluong.value);
+            var luongThang = luong * heSoLuong;
+            document.getElementById("luongThang").textContent = luongThang.toFixed(2);
+        }
+    </script>
+
+    <table border="1">
+        <tr>
+            <th>Lương</th>
+            <th>
+                <form name="frm">
+                    <input type="text" name="luong"> 
+                </form>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>Hệ số lương</td>
+            <td>
+                <form name="hsl">
+                    <input type="number" name="hesoluong" step="0.1">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="button" onclick="tinhLuong()">Tính lương tháng</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lương tháng</td>
+            <td id="luongThang"></td>
+        </tr>
+    </table>
+</body>
+</html>
